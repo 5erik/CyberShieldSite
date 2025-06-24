@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <meta charset="UTF-8">
+    <title>Тест</title>
+    <link rel="stylesheet" href="style.css">
+    </head><body>
+    <header><h1>Интерактивный тест по кибербезопасности</h1></header>
+    <nav>
+        <a href="index.html">Главная</a> |
+        <a href="about.html">О соц. инженерии</a> |
+        <a href="methods.html">Методы</a> |
+        <a href="psychology.html">Психология</a> |
+        <a href="protection.html">Защита</a> |
+        <a href="victim.html">Жертва</a> |
+        <a href="quiz.html">Тест</a>
+    </nav>
+    <main>
+    
+<p id="question">Вы получили письмо от «банка» с просьбой перейти по ссылке. Что вы сделаете?</p>
+<ul id="answers">
+  <li onclick="checkAnswer(0)">Перейду по ссылке</li>
+  <li onclick="checkAnswer(1)">Проверю адрес и свяжусь с банком</li>
+  <li onclick="checkAnswer(2)">Удалю письмо не читая</li>
+</ul>
+<p id="result"></p>
+<script src="quiz.js"></script>
+
+    </main></body></html>
