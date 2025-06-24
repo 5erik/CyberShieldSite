@@ -1,6 +1,56 @@
-
-body { font-family: Arial, sans-serif; background: #eef2f7; margin: 0; padding: 0; }
-header { background: #003366; color: white; padding: 20px; text-align: center; }
-nav, main { padding: 20px; max-width: 900px; margin: auto; }
-nav a { margin: 0 10px; color: #003366; text-decoration: none; font-weight: bold; }
-ul li, ol li { margin-bottom: 10px; }
+:root {
+  --bg: #f9f9f9;
+  --text: #222;
+  --primary: #004080;
+}
+[data-theme='dark'] {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --primary: #66aaff;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+nav, main {
+  padding: 1em;
+  max-width: 900px;
+  margin: auto;
+}
+nav a {
+  color: var(--primary);
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.theme-toggle {
+  float: right;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  border-radius: 5px;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+}
+img.responsive {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  nav, main {
+    padding: 1em;
+  }
+  header h1 {
+    font-size: 1.2em;
+  }
+}
