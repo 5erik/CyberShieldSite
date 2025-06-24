@@ -1,56 +1,104 @@
 :root {
-  --bg: #f9f9f9;
-  --text: #222;
-  --primary: #004080;
+  --bg: #f0f4f8;
+  --text: #1a1a1a;
+  --primary: #3a6ea5;
+  --nav-bg: #ffffff;
+  --nav-link: #3a6ea5;
 }
-[data-theme='dark'] {
+[data-theme="dark"] {
   --bg: #121212;
-  --text: #f0f0f0;
-  --primary: #66aaff;
+  --text: #eaeaea;
+  --primary: #81b3ff;
+  --nav-bg: #1e1e1e;
+  --nav-link: #81b3ff;
 }
-body {
-  font-family: Arial, sans-serif;
+
+html {
   background: var(--bg);
   color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+body {
   margin: 0;
   padding: 0;
 }
+
 header {
   background: var(--primary);
   color: white;
-  padding: 1em;
+  padding: 20px;
   text-align: center;
+  position: relative;
 }
-nav, main {
-  padding: 1em;
-  max-width: 900px;
-  margin: auto;
-}
-nav a {
-  color: var(--primary);
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
+
 .theme-toggle {
-  float: right;
-  background: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: transparent;
   border: 2px solid white;
   color: white;
-  border-radius: 5px;
-  padding: 0.2em 0.5em;
+  padding: 5px 10px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
 }
+
+nav {
+  background: var(--nav-bg);
+  text-align: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: var(--nav-link);
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+ul li, ol li {
+  margin-bottom: 10px;
+}
+
 img.responsive {
   max-width: 100%;
   height: auto;
-  margin-top: 10px;
+  margin-top: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
-@media (max-width: 768px) {
-  nav, main {
-    padding: 1em;
-  }
+
+@media screen and (max-width: 768px) {
   header h1 {
     font-size: 1.2em;
+  }
+
+  nav a {
+    display: block;
+    margin: 6px 0;
+  }
+
+  .theme-toggle {
+    position: static;
+    margin-top: 10px;
+  }
+
+  main {
+    padding: 15px;
+    font-size: 16px;
   }
 }
